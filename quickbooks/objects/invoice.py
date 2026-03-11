@@ -34,7 +34,6 @@ class Invoice(DeleteMixin, QuickbooksPdfDownloadable, QuickbooksManagedObject, Q
         "BillEmailCc": EmailAddress,
         "BillEmailBcc": EmailAddress,
         "CustomerMemo": CustomerMemo,
-        "DeliveryInfo": DeliveryInfo,
         "RecurDataRef": Ref,
         "TaxExemptionRef": Ref,
         "MetaData": MetaData
