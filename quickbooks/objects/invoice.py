@@ -5,13 +5,6 @@ from .detailline import DetailLine, SalesItemLine, SubtotalLine, DiscountLine, G
 from ..mixins import QuickbooksPdfDownloadable, DeleteMixin, SendMixin, VoidMixin
 
 
-class DeliveryInfo(QuickbooksBaseObject):
-    def __init__(self):
-        super(DeliveryInfo, self).__init__()
-        self.DeliveryType = ""
-        self.DeliveryTime = ""
-
-
 class Invoice(DeleteMixin, QuickbooksPdfDownloadable, QuickbooksManagedObject, QuickbooksTransactionEntity,
               LinkedTxnMixin, SendMixin, VoidMixin):
     """
