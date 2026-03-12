@@ -29,7 +29,7 @@ from .detailline import (
 )
 from .employee import Employee
 from .estimate import Estimate
-from .invoice import DeliveryInfo, Invoice
+from .invoice import Invoice
 from .item import Item
 from .journalentry import (
     Entity, JournalEntryLineDetail, JournalEntryLine, JournalEntry
