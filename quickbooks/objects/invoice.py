@@ -48,6 +48,13 @@ class Invoice(DeleteMixin, QuickbooksPdfDownloadable, QuickbooksManagedObject, Q
 
     qbo_object_name = "Invoice"
 
+    _from_json_ignore_keys = frozenset({"DeliveryInfo"})
+
+    @classmethod
+    def from_json(cls, json_data):
+        data = {k: v for k, v in json_data.items() if k not in cls._from_json_ignore_keys}
+        return super(Invoice, cls).from_json(data)
+
     def __init__(self):
         super(Invoice, self).__init__()
         self.Deposit = 0
